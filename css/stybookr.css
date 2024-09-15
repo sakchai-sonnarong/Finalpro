@@ -1,0 +1,302 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Titan+One&display=swap'); /*Font hello*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-family: "Titan One", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+    --boxhello:#f5f5dc;
+}
+
+
+body{
+    background-color: var(--bgColor);
+}
+
+header{
+    height: 100vh;
+    width: 300px;
+    padding: 15px 5px;     /*บนล่าง ซ้ายวา*/
+    background-color: var(--sidebgColoe);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+    box-shadow: 0 0 5px var(--thembar);
+}
+
+header nav{
+    margin-top: 60px;
+}
+
+#MenuBtn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--bgheadlogo);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgbh(0, 0, 0, 20%);
+    display: none;
+    z-index: 999;
+    cursor: pointer; /* กำหนดให้เคอร์เซอร์เป็นลูกศรเมื่อโฮเวอร์อยู่เหนือปุ่ม */
+}
+
+#MenuBtn:hover{
+    background-color: var(--thembar);
+}
+main{
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition: 0.3s;
+}
+
+
+@media only screen and (max-width: 1050px){
+    header{
+        left: -300px;
+    }
+    #MenuBtn{
+        display: block;
+    }
+}
+
+/* =====Click MenuBtn sidebar movlie===== */
+.movile-nav-active header{
+    left: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+    main{
+        margin-left: 0;
+    }
+}
+#logo-head{
+    height: 150px;
+    width: 100%;
+    background-color: var(--bgheadlogo);
+    background-attachment: fixed;     /*ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    justify-content: center;
+    padding: 7px;
+    position: relative;
+}  
+#logo-head::before{
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: rgha(0, 0, 0, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#logo-head .frame {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#logo-head .logo img{
+    height: 100px;  
+    margin-right: 20px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+#logo-head .namecenter  h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#logo-head .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* ความหนาของเส้นใต้ */
+    background-color: orange; /* สีของเส้นใต้ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* เงาของเส้นใต้ */
+}
+#logo-head .namecenter h2{
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+#logo-head .namecenter h3{
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+#logo-head .namecenter  h1, #logo-head .namecenter h2 , #logo-head .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+}
+
+/* ==== Mobile View==== */
+@media only screen and (max-width: 670px) {
+    #logo-head {
+        padding: 30px;
+    }
+    #logo-head .frame .logo img {
+        height: 80px;
+    }
+    #logo-head .namecenter  h1{
+        font-size: 20px;
+    }
+    #logo-head .namecenter h1::after {
+        content: '';
+    }
+    #logo-head .namecenter h2{
+        font-size: 18px;
+    }
+    #logo-head .namecenter h3{
+        font-size: 16px;
+    }
+}
+
+#container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* สีพื้นหลังของ container */
+}
+
+h3 {
+    margin-left: 30px;
+    margin-bottom: 20px; /* ระยะห่างด้านล่างหัวข้อ */
+    text-align: center;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-size: 23px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* ระยะห่างระหว่างองค์ประกอบภายใน */
+    align-items: center;
+}
+
+.alert {
+    width: 30%; /* ทำให้ข้อความแจ้งเตือนกว้างเต็มที่ */
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+    font-family: "Prompt", sans-serif;    /* Thai */
+}
+
+label {
+    display: flex;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-size: 18px;
+    padding-right: 30px;
+}
+form{
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+select {
+    height: 35px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 10px; /* ระยะห่างระหว่างข้อความกับ input */
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+input[type="date"] {
+    height: 35px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-left: 10px; /* ระยะห่างระหว่างข้อความกับ input */
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+option{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}
+
+button[type="submit"] {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปมือเมื่อ hover */
+    transition: background-color 0.3s; 
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* สีพื้นหลังปุ่มเมื่อ hover */
+}
+#timetable {
+    max-width: 800px;               /*กำหนดความกว้างสูงสุดของ container*/
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+table {
+    width: 100%; /* กำหนดให้ตารางมีความกว้างเต็มที่ */
+    border-collapse: collapse; /* ทำให้ไม่มีช่องว่างระหว่างเส้นขอบของตาราง */
+    margin: 0 auto; /* จัดตารางให้อยู่กึ่งกลาง container */
+}
+form {
+    display: flex;
+    align-items: center; /* จัดองค์ประกอบให้อยู่ตรงกลางในแนวตั้ง */
+}
+th, td {
+    padding: 15px; /* ระยะห่างภายในเซลล์ */
+    border: 1px solid #ddd; 
+    text-align: center;         /* จัดข้อความให้อยู่กึ่งกลางเซลล์ */
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-size: 18px;
+}
+
+th {
+    background-color: #278fff; /* สีพื้นหลังของหัวตาราง */
+    color: #fff; /* สีข้อความของหัวตาราง */
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.clickable{
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปมือเมื่อ hover */
+    background-color: #f3f9ff; /* สีพื้นหลังเมื่อ hover */
+}
+
+.clickable:hover {
+    background-color: #fff6a9; /* สีพื้นหลังเมื่อ hover */
+}

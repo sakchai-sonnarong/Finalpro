@@ -1,0 +1,234 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Titan+One&display=swap'); /*Font hello*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-family: "Titan One", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+    --boxhello:#f5f5dc;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+header{
+    background-color: var(--bgheadlogo);
+}
+
+#logo-head{
+    height: 150px;
+    width: 100%;
+    background-attachment: fixed;     /*ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    justify-content: center;
+    padding: 7px;
+    position: relative;
+}  
+#logo-head::before{
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: rgha(0, 0, 0, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#logo-head .frame {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#logo-head .logo img{
+    height: 100px;  
+    margin-right: 20px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+#logo-head .namecenter  h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#logo-head .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* ความหนาของเส้นใต้ */
+    background-color: orange; /* สีของเส้นใต้ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* เงาของเส้นใต้ */
+}
+#logo-head .namecenter h2{
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+#logo-head .namecenter h3{
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+#logo-head .namecenter  h1, #logo-head .namecenter h2 , #logo-head .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+}
+
+/* ==== Mobile View==== */
+@media only screen and (max-width: 670px) {
+    #logo-head {
+        padding: 30px;
+    }
+    #logo-head .frame .logo img {
+        height: 80px;
+    }
+    #logo-head .namecenter  h1{
+        font-size: 20px;
+    }
+    #logo-head .namecenter h1::after {
+        content: '';
+    }
+    #logo-head .namecenter h2{
+        font-size: 18px;
+    }
+    #logo-head .namecenter h3{
+        font-size: 16px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+}
+
+main .container{
+    align-items: center;
+    margin: 80px;
+    width: 800px;
+    padding: 40px 32px;
+    border-radius: 8px;
+    box-shadow: rgba(132, 163, 255, 0.2) 0px 7px 29px 0px;
+}
+
+.head {
+    display: flex;              /* ใช้ Flexbox เพื่อจัดเรียงแนวนอน */
+    align-items: center;        /* จัดให้เนื้อหาทั้งหมดอยู่ตรงกลางในแนวตั้ง */
+    padding-bottom: 10px;
+}
+
+#BackBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;                      /* เอาเส้นใต้ลิงก์ออก */
+    color: inherit;                             /* ใช้สีข้อความจากองค์ประกอบแม่ */
+    border-radius: 50%;                             /* ทำให้พื้นหลังเป็นวงกลม */
+    transition: background-color 0.3s ease;         /* สร้างการเคลื่อนไหวที่นุ่มนวล */
+    margin-right: 30px;                         /* ระยะห่างจาก h2 ด้านขวา */
+}
+
+#BackBtn:hover {
+    background-color: var(--thembar);            /* สีพื้นหลังเมื่อวางเมาส์ */
+    color: white;                       /* สีของไอคอนเมื่อวางเมาส์ */
+}
+
+.container .head h2{
+    margin: 0;                              /* เอาระยะห่างเริ่มต้นของ h2 ออก */
+    font-size: 20px;                        /* ขนาดตัวอักษรของหัวข้อ */
+    font-weight: 600;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}
+
+.container form {
+    display: flex; /* ใช้ Flexbox เพื่อจัดวางฟอร์ม */
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Prompt", sans-serif; /*Thai*/
+    padding: 30px;
+}
+
+.container form .form-group {
+    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่งข้อความและ textarea */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container form label {
+    /* width: 200px; */
+    color: #1d1d1d;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Prompt", sans-serif; /*Thai*/
+    letter-spacing: 0.03rem;
+}
+
+.info {
+    margin-left: 10px;
+    font-family: "Prompt", sans-serif; /*Thai*/
+    color: #1d1d1d;
+    font-size: 18px;
+}
+
+textarea {
+    width: 400px; /* กำหนดความกว้างให้ textarea */
+    height: 70px; /* กำหนดความสูงขั้นต่ำ */
+    padding: 8px;
+    font-size: 16px;
+    font-family: "Prompt", sans-serif; /*Thai*/
+    margin-left: 20px; /* เพิ่มระยะห่างจาก label */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff; 
+    color: #fff;
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    font-family: "Prompt", sans-serif; /*Thai*/
+    display: block;
+    margin: 20px auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #0064cf;
+    color: #fff;
+
+}

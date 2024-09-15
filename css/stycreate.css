@@ -1,0 +1,226 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}   
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+}
+
+body{
+    height: 100hv;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    background-color: var(--bgheadlogo);
+    background-attachment: fixed;    /* ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center;  /*จัดให้อยู่กึ่งกลางในแนวตั้ง*/ 
+    justify-content: center;   /* จัดให้อยู่กึ่งกลางในแนวนอน*/ 
+    padding: 7px;
+    position: relative;
+}
+
+header .frame {
+    display: flex;
+    align-items: center;  /*จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center;   /*จัดให้อยู่กึ่งกลางในแนวนอน */ 
+    z-index: 1;
+}
+
+header .logo img{
+    height: 100px;
+    margin-right: 20px;   /*ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+header .namecenter h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+header .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;      /*ความหนาของเส้นใต้ */
+    background-color: orange;     /*สีของเส้นใต้ */ 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);     /*เงาของเส้นใต้ */
+} 
+header.namecenter h2{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+header .namecenter h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+header .namecenter  h1, header .namecenter h2 , header .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+} 
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 1200px;
+}
+
+.container{
+    /* position:relative; */
+    margin-top: 180px;
+    margin-bottom: 100px;
+    height: 100%;
+    width: 500px;
+    padding: 40px 32px;
+    border-radius: 8px;
+    box-shadow: rgba(29, 85, 254, 0.2) 0px 7px 29px 0px;
+}
+
+.container .h1{
+    font-family: "Prompt", sans-serif;
+    text-align: center;
+    background-color: red;
+}
+
+.container form label{
+    color: #1d1d1d;
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    display: block;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+
+select#gender {
+    height: 40px; /* กำหนดความสูง */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    padding: 4px; /* ระยะห่างภายใน */
+    border-radius: 5px; /* มุมโค้งมน */
+    border: 1px solid #ccc; /* สีของเส้นขอบ */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* เพิ่มการเปลี่ยนสีแบบนุ่มนวล */
+}
+
+/* เปลี่ยนสีเมื่อเลือกหรือโฟกัส */
+select#gender:focus,
+select#gender:hover {
+    background-color: #e0e0e0; /* สีพื้นหลังเมื่อเลือกหรือโฟกัส */
+    border-color: #7a7a7a; /* สีของเส้นขอบเมื่อเลือกหรือโฟกัส */
+    height: 35px;
+}
+
+/* เปลี่ยนสีข้อความเมื่อเลือก */
+select#gender option:checked {
+    background-color: #dcdcdc; /* สีพื้นหลังของตัวเลือกที่ถูกเลือก */
+    color: #000; /* สีของข้อความในตัวเลือกที่ถูกเลือก */
+}
+
+.container form .custome-input{
+    position: relative;
+    margin-top: -10px;
+}
+
+.container form .custome-input input{
+    color: #1d1d1d;
+    font-size: 16px;
+    font-weight: 500;
+    width: 400px;
+    height: 35px;
+    letter-spacing: 0.03rem;
+    border: 1px solid #1d1d1d;
+    background: transparent;
+    outline: none;
+    border-radius: 5px;
+    text-indent: 20px;
+    margin-top: 6px;
+    transition: all 0.3s ease;
+}
+
+.container form .custome-input input:focus{
+    border-color: blue;
+}
+
+.container form .create{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background: #3485ff;
+    color: #fff;
+    border:none;
+    line-height: 50px;
+    font-size: 18px;
+    letter-spacing: 0.025em;        /*เว้นระยยอักษร */
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.container form .create:hover{
+    background: blue;
+
+}
+
+.container form .sign-in a{
+    align-items: center;
+    display: flex;
+    float: column;
+    justify-content: center;
+    color: #6b43ff;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: 6px;
+    text-decoration-color: #6b43ff;
+}
+
+.container form .sign-in a:hover{
+    text-decoration:underline;
+}

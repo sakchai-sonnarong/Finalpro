@@ -1,0 +1,327 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Titan+One&display=swap'); /*Font hello*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-family: "Titan One", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    width: 100%;
+    background-color: var(--bgheadlogo);
+    background-attachment: fixed;    /* ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center;  /*จัดให้อยู่กึ่งกลางในแนวตั้ง*/ 
+    justify-content: center;   /* จัดให้อยู่กึ่งกลางในแนวนอน*/ 
+    padding: 7px;
+    position: relative;
+}
+
+header .frame {
+    display: flex;
+    align-items: center;  /*จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center;   /*จัดให้อยู่กึ่งกลางในแนวนอน */ 
+    z-index: 1;
+}
+
+header .logo img{
+    height: 100px;
+    margin-right: 20px;   /*ระยะห่างระหว่างโลโก้และข้อความ */
+}
+
+header .namecenter h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+header .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;      /*ความหนาของเส้นใต้ */
+    background-color: orange;     /*สีของเส้นใต้ */ 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);     /*เงาของเส้นใต้ */
+} 
+header.namecenter h2{
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+header .namecenter h3{
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+header .namecenter  h1, header .namecenter h2 , header .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+} 
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    margin-top: 800px;
+}
+
+main .container{
+    align-items: center;
+    margin-top: 100px;
+    width: 500px;
+    padding: 40px 32px;
+    border-radius: 8px;
+    box-shadow: rgba(29, 85, 254, 0.2) 0px 7px 29px 0px;
+}
+
+.container h1{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}
+
+.alert {
+    font-family: "Prompt", sans-serif; /* Thai */
+}
+
+.container form label{
+    color: #1d1d1d;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    letter-spacing: 0.03rem;
+    display: block;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.container form .custome-input{
+    position: relative;
+}
+.container form .custome-input input{
+    color: #1d1d1d;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    width: 100%;
+    height: 46px;
+    letter-spacing: 0.03rem;
+    border: 1px solid #1d1d1d;
+    background: transparent;
+    outline: none;
+    border-radius: 8px;
+    text-indent: 20px;
+    margin-top: 6px;
+    transition: all 0.3s ease;
+}
+
+.container form .custome-input input:focus{
+    border-color: #5222fd;
+}
+
+.container form .custome-input i{
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 20px;
+    transition: all 0.3s ease;
+}
+
+.container form .custome-input input:focus + i{
+    color: #5222fd;
+}
+
+.container form .signin{
+    width: 100%;
+    margin-top: 30px;
+    background: #6b43ff;
+    color: #fff;
+    border:none;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    letter-spacing: 0.025em;         /* เว้นระยยอักษร */
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.container form .signin:hover{
+    background: #5222fd;
+
+}
+
+.container form .create-account p{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+}
+
+.container form .create-account a{
+    color: #6b43ff;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    text-decoration: none;
+    text-underline-offset: 6px;
+    text-decoration-color: #6b43ff;
+}
+
+.container form .create-account a:hover{
+    text-decoration:underline;
+}
+
+/* .container{
+    align-items: center;
+    margin-top: 100px;
+    width: 500px;
+    padding: 40px 32px;
+    border-radius: 8px;
+    box-shadow: rgba(29, 85, 254, 0.2) 0px 7px 29px 0px;
+}
+
+.container h1{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container form label{
+    color: #1d1d1d;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.03rem;
+    display: block;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.container form .custome-input{
+    position: relative;
+}
+.container form .custome-input input{
+    color: #1d1d1d;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 46px;
+    letter-spacing: 0.03rem;
+    border: 1px solid #1d1d1d;
+    background: transparent;
+    outline: none;
+    border-radius: 8px;
+    text-indent: 20px;
+    margin-top: 6px;
+    transition: all 0.3s ease;
+}
+
+.container form .custome-input input:focus{
+    border-color: #5222fd;
+}
+
+.container form .custome-input i{
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 20px;
+    transition: all 0.3s ease;
+}
+
+.container form .custome-input input:focus + i{
+    color: #5222fd;
+}
+
+.container form .signin{
+    width: 100%;
+    margin-top: 30px;
+    background: #6b43ff;
+    color: #fff;
+    border:none;
+    line-height: 50px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.025em;        เว้นระยยอักษร 
+    cursor: pointer;
+    font-weight: 800;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.container form .signin:hover{
+    background: #5222fd;
+
+}
+
+.container form .create-account p{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+.container form .create-account a{
+    color: #6b43ff;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    text-underline-offset: 6px;
+    text-decoration-color: #6b43ff;
+}
+
+.container form .create-account a:hover{
+    text-decoration:underline;
+} */

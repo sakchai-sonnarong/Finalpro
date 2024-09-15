@@ -1,0 +1,260 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Titan+One&display=swap'); /*Font hello*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-family: "Titan One", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+    --boxhello:#f5f5dc;
+}
+body{
+    background-color: var(--bgColor);
+}
+
+header{
+    height: 100vh;
+    width: 300px;
+    padding: 15px 5px;     /*บนล่าง ซ้ายวา*/
+    background-color: var(--sidebgColoe);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+    box-shadow: 0 0 5px var(--thembar);
+}
+
+header nav{
+    margin-top: 60px;
+}
+
+#MenuBtn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--bgheadlogo);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgbh(0, 0, 0, 20%);
+    display: none;
+    z-index: 999;
+}
+
+#MenuBtn:hover{
+    background-color: var(--thembar);
+}
+main{
+    margin-left: 300px;
+    transition: 0.3s;
+}
+
+
+@media only screen and (max-width: 1050px){
+    header{
+        left: -300px;
+    }
+    #MenuBtn{
+        display: block;
+    }
+}
+
+/* =====Click MenuBtn sidebar movlie===== */
+.movile-nav-active header{
+    left: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+    main{
+        margin-left: 0;
+    }
+}
+#logo-head{
+    height: 150px;
+    width: 100%;
+    background-color: var(--bgheadlogo);
+    background-attachment: fixed;     /*ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    padding: 7px;
+    position: relative;
+}  
+#logo-head::before{
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: rgha(0, 0, 0, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#logo-head .frame {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#logo-head .logo img{
+    height: 100px;  
+    margin-right: 20px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+#logo-head .namecenter  h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#logo-head .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* ความหนาของเส้นใต้ */
+    background-color: orange; /* สีของเส้นใต้ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* เงาของเส้นใต้ */
+}
+#logo-head .namecenter h2{
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+#logo-head .namecenter h3{
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+#logo-head .namecenter  h1, #logo-head .namecenter h2 , #logo-head .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+}
+
+
+
+/* ==== Mobile View==== */
+@media only screen and (max-width: 670px) {
+    #logo-head {
+        padding: 30px;
+    }
+    #logo-head .frame .logo img {
+        height: 80px;
+    }
+    #logo-head .namecenter  h1{
+        font-size: 20px;
+    }
+    #logo-head .namecenter h1::after {
+        content: '';
+    }
+    #logo-head .namecenter h2{
+        font-size: 18px;
+    }
+    #logo-head .namecenter h3{
+        font-size: 16px;
+    }
+}
+
+#container{
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* จัดเรียงลูกในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งลูกในแนวนอนให้อยู่ตรงกลาง */
+    justify-content: center; /* จัดตำแหน่งลูกในแนวตั้งให้อยู่ตรงกลาง */
+}
+
+#container h2{
+    margin: 20px 0; /* ตั้งค่าระยะห่างทั้งด้านบนและล่าง */
+    text-align: center;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-size: 20px;
+}
+
+#container form{
+    display: flex;
+    margin: 50px 0 50px;
+    font-family: "Prompt", sans-serif ;
+    font-size: 18px;
+    align-items: center;
+    gap: 20px;
+}
+
+form .detail , form .detail-1{
+    display: flex;
+    align-items: center;
+    margin-right: 0; /* เอา margin ออกเพราะจัดเรียงในแนวตั้ง */
+    font-family: "Prompt", sans-serif ;
+    font-size: 18px;
+}
+form .detail label ,form .detail-1 label {
+    margin-right: 20px;
+    font-family: "Prompt", sans-serif ;
+    font-size: 18px;
+}
+.detail input{
+    height: 38px;
+    padding-left: 10px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+.detail-1 select , .detail-1 option {
+    height: 38px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    padding-left: 10px;
+    padding-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+button[type="submit"] {
+    width: 70px;
+    height: 45px;
+    margin-right: 15px;
+    align-items: center;
+    font-family: "Prompt", sans-serif;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #86c0fd;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+}

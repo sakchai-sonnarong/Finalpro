@@ -1,0 +1,383 @@
+/* ==== Google FontImport - Popions ==== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap'); /*Font Eng*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&display=swap');  /*Font thai*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Titan+One&display=swap'); /*Font hello*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-family: "Titan One", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --sidebgColoe: #D0F8CE;
+    --thembar:#055007;
+    --themColor: #FF914D;
+    --iconbgColor:#202647;
+    --textColor: #fff;
+    --bgColor: #f7f7f7;
+    --textbar: #5f5f5f;
+    --bghoverbar:#A3E9A4;
+    --bgheadlogo:rgb(107, 236, 120);
+    --texthead:#c24f08;
+    --boxhello:#f5f5dc;
+}
+
+body{
+    background-color: var(--bgColor);
+}
+
+header{
+    height: 100vh;
+    width: 300px;
+    padding: 15px 5px;     /*บนล่าง ซ้ายวา*/
+    background-color: var(--sidebgColoe);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.4s;
+    z-index: 99;
+    box-shadow: 0 0 5px var(--thembar);
+}
+
+header nav{
+    margin-top: 60px;
+}
+
+#MenuBtn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: var(--bgheadlogo);
+    text-align: center;
+    line-height: 42px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgbh(0, 0, 0, 20%);
+    display: none;
+    z-index: 999;
+    cursor: pointer; /* กำหนดให้เคอร์เซอร์เป็นลูกศรเมื่อโฮเวอร์อยู่เหนือปุ่ม */
+}
+
+#MenuBtn:hover{
+    background-color: var(--thembar);
+}
+main{
+    margin-left: 300px;
+    background-color: var(--bgColor);
+    transition: 0.3s;
+}
+
+
+@media only screen and (max-width: 1050px){
+    header{
+        left: -300px;
+    }
+    #MenuBtn{
+        display: block;
+    }
+}
+
+/* =====Click MenuBtn sidebar movlie===== */
+.movile-nav-active header{
+    left: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+    main{
+        margin-left: 0;
+    }
+}
+#logo-head{
+    height: 150px;
+    width: 100%;
+    background-color: var(--bgheadlogo);
+    background-attachment: fixed;     /*ภาพพื้นหลังอยู่ในตำแหน่งเดิม (คงที่)*/
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวตั้ง */
+    justify-content: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    justify-content: center;
+    padding: 7px;
+    position: relative;
+}  
+#logo-head::before{
+    content: '';
+    width: 100%;
+    height: 150px;
+    background-color: rgha(0, 0, 0, 0.431);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#logo-head .frame {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#logo-head .logo img{
+    height: 100px;  
+    margin-right: 20px; /* ระยะห่างระหว่างโลโก้และข้อความ */
+}
+#logo-head .namecenter  h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: -1px;
+    color: black;
+    text-align: start;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+#logo-head .namecenter h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* ความหนาของเส้นใต้ */
+    background-color: orange; /* สีของเส้นใต้ */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* เงาของเส้นใต้ */
+}
+#logo-head .namecenter h2{
+    font-size: 20px;
+    color: var(--texthead);
+    box-shadow: #000;
+    text-align:s end;
+}
+#logo-head .namecenter h3{
+    font-size: 18px;
+    color: black;
+    text-align: end;
+}
+#logo-head .namecenter  h1, #logo-head .namecenter h2 , #logo-head .namecenter h3{
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    margin-top: 1%;
+    margin-bottom: 0px;
+    letter-spacing: 0px;
+}
+
+/* ==== Mobile View==== */
+@media only screen and (max-width: 670px) {
+    #logo-head {
+        padding: 30px;
+    }
+    #logo-head .frame .logo img {
+        height: 80px;
+    }
+    #logo-head .namecenter  h1{
+        font-size: 20px;
+    }
+    #logo-head .namecenter h1::after {
+        content: '';
+    }
+    #logo-head .namecenter h2{
+        font-size: 18px;
+    }
+    #logo-head .namecenter h3{
+        font-size: 16px;
+    }
+}
+
+/* Hello */
+#hello {
+    background-color: var(--boxhello); /* สีพื้นหลังเป็นสีเหลือง */
+    padding: 20px; /* การเว้นระยะห่างในกล่อง */
+    padding-bottom: 2px;
+    margin: 20px; /* การเว้นระยะห่างจากกล่องอื่นๆ */
+    border-radius: 10px; /* เพิ่มขอบมน (ไม่บังคับ) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา (ไม่บังคับ) */
+}
+#hello .welcome h1{
+    padding-left: 30px;
+    font-size: 50px;
+    font-family: "Titan One", sans-serif;
+    color: blue;
+}
+#hello .welcome h2{
+    padding-left: 30px;
+    font-family: "Prompt", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+#hello .open {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* จัดให้อยู่ขอบด้านขวา */
+    color: red;
+    position: relative;
+}
+
+#hello .open p{
+    line-height: 1.3rem;
+    text-align: center;
+    font-family: "Prompt", sans-serif; 
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: auto; /* จัดให้อยู่ชิดขอบด้านขวา */
+}
+
+#news{
+    padding-left: 25px ;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+}
+#news i{
+    position: 35px;
+    height: 38px;
+    width: 40px;
+    color: white;
+    background-color: #0047FF;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+#news .text{
+    font-size: 30px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-weight: 600px;
+    color: black;
+    margin-left: 10px;
+    letter-spacing: -1px;
+}
+
+#boxes{
+    padding-left: 25px ;
+    padding-right: 25px;
+    position: relative;
+    margin-top: 25px;
+    align-items: center;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+} 
+
+#boxes .box1 , #boxes .box2, 
+#boxes .box3, #boxes .box4, 
+#boxes .box5, #boxes .box6, 
+#boxes .box7, #boxes .box8, 
+#boxes .box9, #boxes .box10 {
+    padding: 20px;
+    height: 350px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#boxes .box1 img, #boxes .box2 img,
+#boxes .box3 img, #boxes .box4 img,
+#boxes .box5 img, #boxes .box6 img,
+#boxes .box7 img, #boxes .box8 img,
+#boxes .box9 img, #boxes .box10 img {
+    margin: 10px;
+    height: 200px;
+}
+#boxes .box4 img ,
+#boxes .box5 img ,
+#boxes .box6 img ,
+#boxes .box7 img{
+    width: 80%;
+
+}
+#boxes .box1 p, #boxes .box2 p,
+#boxes .box3 p, #boxes .box4 p , 
+#boxes .box5 p, #boxes .box6 p,
+#boxes .box7 p, #boxes .box8 p,
+#boxes .box9 p, #boxes .box10 p {
+    color: black;
+    padding-top: 13px;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    line-height: 1.25rem;
+}
+
+#boxes .box1 a, #boxes .box2 a, 
+#boxes .box3 a, #boxes .box4 a, 
+#boxes .box5 a, #boxes .box6 a, 
+#boxes .box7 a, #boxes .box8 a, 
+#boxes .box9 a, #boxes .box10 a {
+    text-decoration: none; 
+    display: block;
+}
+
+#boxes .box1 a:hover, #boxes .box2 a:hover, 
+#boxes .box3 a:hover, #boxes .box4 a:hover, 
+#boxes .box5 a:hover, #boxes .box6 a:hover, 
+#boxes .box7 a:hover, #boxes .box8 a:hover, 
+#boxes .box9 a:hover, #boxes .box10 a:hover {
+    background-color: rgb(255, 195, 173);
+    border-radius: 5px;
+}
+
+#footer {
+    height: 100hv;
+    width: 100%;
+    margin-top: 100px;
+    background-color: #8d8d8d;
+    box-shadow: 0 0 5px rgb(41, 41, 41);
+}
+#footer .footer-conten{
+    /* padding: 50px; */
+    padding: 30px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 3.5rem;
+
+}
+#footer .contact h5 , #footer .web-msu h5{
+    color: black;
+    font-size: 20px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#footer .contact li , #footer .web-msu li{
+    list-style: none;
+}
+#footer .contact li a , #footer .web-msu li a{
+    display: flex;
+    color: #3d3d3d;
+    font-size: 15px;
+    font-weight: 400;
+    transition: all .40s ease;
+    text-decoration: none;
+    align-items: center;
+}
+#footer .footer-conten li a:hover {
+    transform: translate(-3px) translateX(-5px);
+}
+#footer .footer-conten i{
+    color: #000;
+}
+#footer .contact i p {
+    font-style: normal;
+}
+#footer .footer-conten p{
+    color:#3d3d3d;
+    font-size: 15px;
+    font-family: "Prompt", sans-serif;    /*Thai*/
+    line-height: 20px;
+}
+
+#footer .footer-conten p:hover {
+    color: #fff;
+}
